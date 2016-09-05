@@ -3,7 +3,7 @@
 
     "name": "Badger",
     "description": "Add custom badges to Trello.",
-    "version": "1.0",
+    "version": "1.0.1",
 
     "background": {
         "scripts": [ "background.js" ]

@@ -51,7 +51,7 @@ chrome.runtime.onInstalled.addListener(function() {
                         name: "Days Estimate",
                         field: "daysEstimate",
                         icon: "calendar",
-                        regex: "~([0-9]+)",
+                        regex: "~([0-9]+(\.[0-9]?)?)",
                         textColor: "#fff",
                         bgColor: "#BB6666",
                         fontSize: "smaller",
@@ -89,7 +89,7 @@ chrome.runtime.onInstalled.addListener(function() {
                             if (!currentValue.daysEstimate) {
                                 result = previousValue;
                             } else {
-                                result  = previousValue + parseInt(currentValue.daysEstimate, 10);
+                                result  = previousValue + parseFloat(currentValue.daysEstimate, 10);
                             }
                             if (index == array.length - 1) {
                                 var weeks = Math.floor(result / 5);
